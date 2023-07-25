@@ -2,11 +2,10 @@
 
 /**
  * is_chain - test if current char in buffer is a chain delimeter
- * @info: the parameter struct
- * @buf: the char buffer
- * @p: address of current position in buf
- *
- * Return: 1 if chain delimeter, 0 otherwise
+ * @INFO: the parameter struct
+ * @BUF: the char buffer
+ * @P: address of current position in buf
+ * Return: (1) if chain delimeter, (0) otherwise
  */
 int is_chain(info_t *info, char *buf, size_t *p)
 {
@@ -24,9 +23,9 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		j++;
 		info->cmd_buf_type = CMD_AND;
 	}
-	else if (buf[j] == ';') /* found end of this command */
+	else if (buf[j] == ';') /* FOUND  END OF THIS COMMAND */
 	{
-		buf[j] = 0; /* replace semicolon with null */
+		buf[j] = 0; /* REPLACE SEMICOLON WITH NULL */
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
@@ -42,7 +41,7 @@ int is_chain(info_t *info, char *buf, size_t *p)
  * @p: address of current position in buf
  * @i: starting position in buf
  * @len: length of buf
- *
+ *BY BOSS
  * Return: Void
  */
 void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
